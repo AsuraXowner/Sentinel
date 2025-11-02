@@ -19,8 +19,8 @@ if not isfolder("Sentinel/games/"..game.PlaceId) then
 	local ok, data = pcall(function() return game:HttpGet("https://raw.githubusercontent.com/AsuraXowner/Sentinel/refs/heads/main/games/"..game.PlaceId.."/"..game.PlaceId..".lua") end)
 	if ok and data and #data > 0 then
 		makefolder("Sentinel/games/"..game.PlaceId)
-		writefile("Sentinel/games/"..game.PlaceId.."/"..game.PlaceId.."..lua", data)
+		writefile("Sentinel/games/"..game.PlaceId.."/"..game.PlaceId..".lua", data)
 	end
 end
 
-loadstring(readfile("Sentinel/games/"..game.PlaceId.."/"..game.PlaceId.."..lua"))()
+loadstring(readfile("Sentinel/games/"..game.PlaceId.."/"..game.PlaceId..".lua"))()
